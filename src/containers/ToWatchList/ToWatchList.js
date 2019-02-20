@@ -15,9 +15,8 @@ class ToWatchList extends Component {
     };
 
 
-
     deleteMovie = (id, event) => {
-        event.preventDefault()
+        event.preventDefault();
         let movieId = this.state.movies.findIndex(movie => {
             return movie.id === id;
         });
@@ -60,9 +59,7 @@ class ToWatchList extends Component {
     };
 
 
-
     changeMovie = (id, event) => {
-        // const name = event.target.name;
         let value = event.target.value;
         let movieId = this.state.movies.findIndex(movie => {
             return movie.id === id;
@@ -84,8 +81,6 @@ class ToWatchList extends Component {
     render() {
         return (
             <Fragment>
-
-
                 <AddMovie
                     movie={this.state.currentMovie}
                     onChangeInput={(event) => this.addMovieForm(event)}
@@ -104,7 +99,6 @@ class ToWatchList extends Component {
                         </MovieList>
                     </div>
                 })}
-
             </Fragment>
         )
     }

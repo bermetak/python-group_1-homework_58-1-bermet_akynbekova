@@ -5,7 +5,6 @@ import './MovieList.css';
 class MovieList extends Component {
 
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('[Post] ShouldUpdate');
         return nextProps.name !== this.props.name
     }
 
